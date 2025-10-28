@@ -1,0 +1,13 @@
+.product_items{
+    height: 350px;
+}
+
+.product_items img{
+    width: 220px;
+}
+
+.product_items:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
