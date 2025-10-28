@@ -53,12 +53,20 @@ a.active .nav_p {
   cursor: pointer;
 }
 
+.drop_menu{
+  z-index: 1000;
+}
+
 @media (max-width: 780px) {
   .nav_ul_div {
     display: none !important;
   }
   .three_dot_menu {
     display: block;
+  }
+  a.active{
+    background-color: black;
+    color: white !important;
   }
 }
 @media (max-width: 480px) {

@@ -45,16 +45,16 @@ const Hero = () => {
 
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <div className="d-flex">
+            <div className="hero_div_img d-flex">
               <div className="d-flex text-dark w-50 flex-column align-items-center justify-content-center">
                 <div className="d-flex">
-                  <p className="hero_text_line bg-dark d-block me-2"></p>
+                  <p className="hero_text_line bg-dark me-2"></p>
                   <p>OUR BESTSELLERS</p>
                 </div>
-                <h1>MODERN & MINIMAL</h1>
+                <h1 className="ms-3">MODERN & MINIMAL</h1>
                 <div className="d-flex">
                   <p>SHOP NOW</p>
-                  <p className="hero_text_line bg-dark d-block ms-2"></p>
+                  <p className="hero_text_line bg-dark ms-2"></p>
                 </div>
               </div>
               <img src={model_3} className="d-block w-50" alt="..." />
@@ -62,16 +62,16 @@ const Hero = () => {
           </div>
 
           <div className="carousel-item">
-            <div className="d-flex">
+            <div className="hero_div_img d-flex">
               <div className="d-flex text-dark w-50 flex-column align-items-center justify-content-center">
                 <div className="d-flex">
-                  <p className="hero_text_line bg-dark d-block me-2"></p>
+                  <p className="hero_text_line bg-dark me-2"></p>
                   <p>OUR BESTSELLERS</p>
                 </div>
-                <h1>TRENDY & FASHION-FORWARD</h1>
+                <h1 className="ms-4">TRENDY & FASHION-FORWARD</h1>
                 <div className="d-flex">
                   <p>SHOP NOW</p>
-                  <p className="hero_text_line bg-dark d-block ms-2"></p>
+                  <p className="hero_text_line bg-dark ms-2"></p>
                 </div>
               </div>
               <img src={model_1} className="d-block w-50" alt="..." />
@@ -79,16 +79,16 @@ const Hero = () => {
           </div>
 
           <div className="carousel-item">
-            <div className="d-flex">
+            <div className="hero_div_img d-flex">
               <div className="d-flex text-dark w-50 flex-column align-items-center justify-content-center">
                 <div className="d-flex">
-                  <p className="hero_text_line bg-dark d-block me-2"></p>
+                  <p className="hero_text_line bg-dark me-2"></p>
                   <p>OUR BESTSELLERS</p>
                 </div>
                 <h1>STREETWEAR / YOUTHFUL</h1>
                 <div className="d-flex">
                   <p>SHOP NOW</p>
-                  <p className="hero_text_line bg-dark d-block ms-2"></p>
+                  <p className="hero_text_line bg-dark ms-2"></p>
                 </div>
               </div>
               <img src={model_2} className="d-block w-50" alt="..." />
@@ -96,16 +96,16 @@ const Hero = () => {
           </div>
 
           <div className="carousel-item bg-light">
-            <div className="d-flex justify-content-between">
+            <div className="hero_div_img d-flex justify-content-between">
               <div className="d-flex text-dark w-50 flex-column align-items-center justify-content-center">
                 <div className="d-flex">
-                  <p className="hero_text_line bg-dark d-block me-2"></p>
+                  <p className="hero_text_line bg-dark me-2"></p>
                   <p>OUR BESTSELLERS</p>
                 </div>
                 <h1>LUXURY / PREMIUM</h1>
                 <div className="d-flex">
                   <p>SHOP NOW</p>
-                  <p className="hero_text_line bg-dark d-block ms-2"></p>
+                  <p className="hero_text_line bg-dark ms-2"></p>
                 </div>
               </div>
               <img src={model_4} className="d-block w-50" alt="..." />

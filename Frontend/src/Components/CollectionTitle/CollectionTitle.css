@@ -1,0 +1,11 @@
+@media (max-width: 620px) {
+    .collection_title h1{
+        font-size: 20px;
+    }
+    .collection_title p{
+        font-size: 15px;
+    }
+    .latest_name_line{
+        display: none;
+    }
+}

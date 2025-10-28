@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./BestSeller.css";
-import CollectionTitle from "../CollectionTitle";
+import CollectionTitle from "../CollectionTitle/CollectionTitle.jsx";
 import { ShopContext } from "../../Context/ShopContextProvider";
 import ProductItems from "../Product/ProductItems";
 
@@ -21,7 +21,7 @@ const BestSeller = () => {
           "Discover our best sellers — timeless designs, unmatched quality, and style that defines every moment."
         }
       />
-      <div className="best_seller_product_div mt-3">
+      <div className="product_div mt-3">
         {bestSellerProduct.map((items, index) => (
           <ProductItems
             key={index}

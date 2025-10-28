@@ -8,7 +8,7 @@ const ProductItems = ({ id, image, name, price }) => {
 
   return (
     <Link to={`/product/${id}`}>
-      <div className="product_items overflow-hidden mt-2 d-flex flex-column">
+      <div className="product_items overflow-hidden mt-2 align-items-center d-flex flex-column">
         <div>
           <img src={image} alt="" className="rounded" />
         </div>
