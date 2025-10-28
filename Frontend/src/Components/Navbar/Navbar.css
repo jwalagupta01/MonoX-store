@@ -1,0 +1,75 @@
+.brand_logo {
+  width: 160px;
+  height: 50px;
+}
+
+.nav_ul {
+  gap: 30px;
+  margin-bottom: -30px;
+}
+
+.nav_p {
+  transition: all 0.5s ease; /* makes changes smooth */
+}
+
+a.active .nav_p {
+  text-decoration: underline solid gray 2px;
+  text-underline-offset: 5px;
+  text-decoration-style: wavy;
+}
+
+.nav_right_div {
+  gap: 40px;
+}
+.nav_right_div span {
+  font-size: 25px;
+  cursor: pointer;
+}
+.nav_right_div span p {
+  font-size: 10px;
+  background-color: rgb(243, 5, 5);
+}
+.user_icon:hover .user_hover_div {
+  display: block !important;
+}
+.hover_box {
+  height: 92px;
+  width: 150px;
+  background-color: #bbfcd0;
+  cursor: pointer;
+}
+.hovor_1:hover,
+.hovor_2:hover,
+.hovor_3:hover {
+  background-color: #094403;
+  color: rgb(245, 242, 242);
+}
+
+.three_dot_menu {
+  display: none;
+}
+
+.nav_back_button {
+  cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  .nav_ul_div {
+    display: none !important;
+  }
+  .three_dot_menu {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .brand_logo {
+    width: 90px;
+    height: 30px;
+  }
+  .nav_right_div {
+    gap: 20px;
+  }
+  .nav_right_div span {
+    font-size: 20px;
+  }
+}
