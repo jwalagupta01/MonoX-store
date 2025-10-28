@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="navbar border-bottom border-1 d-flex justify-content-between align-items-center ">
+      <div className="navbar d-flex justify-content-between align-items-center ">
         <Link to={"/"}>
           <img src={assets.logo} className="brand_logo" alt="" />
         </Link>
