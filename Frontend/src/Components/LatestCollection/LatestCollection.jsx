@@ -12,7 +12,6 @@ const LatestCollection = () => {
     setLatestProduct(products.sort(() => Math.random() - 0.5).slice(0, 10));
   }, []);
 
-  console.log(products);
   return (
     <div className="latest_product_div d-flex flex-column align-items-center mt-5">
       <CollectionTitle

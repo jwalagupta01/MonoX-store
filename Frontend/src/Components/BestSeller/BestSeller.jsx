@@ -9,7 +9,10 @@ const BestSeller = () => {
   const [bestSellerProduct, setBestSellerProduct] = useState([]);
 
   useEffect(() => {
-    setBestSellerProduct(products.sort(() => Math.random() - 0.5).slice(0, 10));
+    const bestProduct = products.filter((items) => items.bestseller);
+    setBestSellerProduct(
+      bestProduct.sort(() => Math.random() - 0.5).slice(0, 5)
+    );
   }, []);
 
   return (
