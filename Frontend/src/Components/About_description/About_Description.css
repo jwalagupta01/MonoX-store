@@ -1,0 +1,29 @@
+.description_div img {
+  width: 300px;
+}
+.top_desc p{
+    margin-left: 30px;
+}
+.bottom_desc p{
+    margin: 0 30px;
+}
+
+@media (max-width: 640px) {
+  .description_div img {
+    width: 200px;
+  }
+  .description_div p {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .top_desc{
+    flex-direction: column;
+    padding: 0 20px;
+
+  }
+  .bottom_desc{
+    flex-direction: column;
+    padding: 0 20px;
+    padding-top: 15px;
+  }
+}
