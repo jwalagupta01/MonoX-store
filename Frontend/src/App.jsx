@@ -11,13 +11,13 @@ import Order from "./Pages/Order";
 import PlaceOrder from "./Pages/PlaceOrder";
 import Product from "./Pages/Product";
 import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
     <div className="main_div">
       <div>
         <Navbar />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -31,6 +31,7 @@ const App = () => {
           <Route path="/placeOrder" element={<PlaceOrder />} />
           <Route path="/product/:ProductId" element={<Product />} />
         </Routes>
+        <Footer />
       </div>
     </div>
   );
