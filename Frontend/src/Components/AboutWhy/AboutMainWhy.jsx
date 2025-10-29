@@ -1,16 +1,26 @@
 import React from "react";
-import "./AboutWhy.css"
+import "./AboutWhy.css";
 import AboutWhy from "./AboutWhy";
-import { MdOutlineWorkspacePremium, MdSupportAgent, MdOutlineRecycling  } from "react-icons/md";
-import { GrCurrency, GrUpdate  } from "react-icons/gr";
+import {
+  MdOutlineWorkspacePremium,
+  MdSupportAgent,
+  MdOutlineRecycling,
+} from "react-icons/md";
+import { GrCurrency, GrUpdate } from "react-icons/gr";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { BiSolidOffer } from "react-icons/bi";
 
-
 const AboutMainWhy = () => {
   return (
     <div>
+      <div className="d-flex my-4">
+        <h3>Why MonoX </h3>
+        <div
+          className="bg-dark mt-3"
+          style={{ width: "40px", height: "2px" }}
+        ></div>
+      </div>
       <div className="main_why_div d-grid">
         <AboutWhy
           icon={<MdOutlineWorkspacePremium />}
@@ -28,10 +38,7 @@ const AboutMainWhy = () => {
           icon={<LiaShippingFastSolid />}
           tittle={"Fast and reliable delivery service"}
         />
-        <AboutWhy
-          tittle={"24/7 customer support"}
-          icon={<MdSupportAgent />}
-        />
+        <AboutWhy tittle={"24/7 customer support"} icon={<MdSupportAgent />} />
         <AboutWhy
           tittle={"Subscribe now and get 20% off on every product"}
           icon={<BiSolidOffer />}
