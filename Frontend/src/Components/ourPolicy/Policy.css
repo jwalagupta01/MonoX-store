@@ -1,9 +1,56 @@
+.policy_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.policy{
+    display: flex;
+}
 .left_policy{
+    width: 300px;
+    height: 200px;
     margin-top: 150px;
+    margin-right: 15px;
 }
 .middle_policy{
+    width: 300px;
+    height: 200px;
     margin-top: -150px;
 }
 .right_policy{
+    width: 300px;
+    height: 200px;
     margin-top: 150px;
+    margin-left: 15px;
+}
+
+@media (max-width: 1100px) {
+    .policy{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .left_policy{
+        margin-top: 0;
+    }
+    .right_policy{
+        margin-top: 5px;
+        margin-left: 45%;
+    }
+    .middle_policy{
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 759px) {
+    .policy{
+        display: grid ;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .middle_policy{
+        margin-top: 15px;
+    }
+    .right_policy{
+        margin-left: 0;
+    }
 }
