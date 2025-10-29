@@ -11,7 +11,7 @@ const About = () => {
     <AboutMainDescription />
     <AboutMainWhy />
     <NewslatterBox />
-    {/* <Footer /> */}
+    <Footer />
   </div>;
 };
 
