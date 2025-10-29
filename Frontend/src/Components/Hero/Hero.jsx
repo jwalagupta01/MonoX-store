@@ -45,7 +45,7 @@ const Hero = () => {
 
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <div className="hero_div_img d-flex">
+            <div className="hero_div_img d-flex ">
               <div className="d-flex text-dark w-50 flex-column align-items-center justify-content-center">
                 <div className="d-flex">
                   <p className="hero_text_line bg-dark me-2"></p>

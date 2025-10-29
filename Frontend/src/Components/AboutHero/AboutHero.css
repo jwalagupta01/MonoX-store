@@ -1,0 +1,39 @@
+.about_hero_div{
+    width: 100%;
+    height: 500px;
+}
+
+.about_hero_img {
+   height: 500px;
+}
+
+.about_hero{
+    height: 100%;
+    overflow: hidden;
+}
+
+@media (max-width:1090px) {
+    .header_line{
+        display: none;
+    }
+    .about_hero_div{
+        height: 400px;
+    }
+    .about_hero_img{
+        height: 400px;
+    }
+    .about_hero_text_div h3{
+        font-size: 25px;
+    }
+    .about_hero_text_div p{
+        font-size: 15px !important;
+    }
+}
+@media (max-width:800px) {
+    .about_hero_div{
+        height: auto;
+    }
+    .about_hero{
+        flex-direction: column;
+    }
+}
