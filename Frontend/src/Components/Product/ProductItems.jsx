@@ -9,7 +9,7 @@ const ProductItems = ({ id, image, name, price }) => {
   return (
     <Link to={`/product/${id}`}>
       <div className="product_items overflow-hidden bg-light rounded mt-2 d-flex flex-column">
-        <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center justify-content-center">
           <img src={image} alt="" className="rounded" />
         </div>
         <p className="ps-3 pt-2 fs-6">{name}</p>
