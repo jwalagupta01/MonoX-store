@@ -1,16 +1,28 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
 import { IoMdSearch } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa";
 import { IoBagHandleSharp } from "react-icons/io5";
 import { TiThListOutline } from "react-icons/ti";
 import { IoIosArrowBack } from "react-icons/io";
 import { assets } from "../../assets/frontend_assets/assets.js";
+import { useContext } from "react";
+import { ShopContext } from "../../Context/ShopContextProvider.jsx";
 
 const Navbar = () => {
   const [navVisible, setNavVisible] = useState(false);
-
+  const { showSearch, SetShowSearch } = useContext(ShopContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const searchOnHandler = () => {
+    if (location.pathname.includes("collection")) {
+      SetShowSearch(!showSearch);
+    } else if (!location.pathname.includes("collection")) {
+      navigate("/collection");
+      SetShowSearch(true);
+    }
+  };
   return (
     <nav>
       <div className="navbar d-flex justify-content-between align-items-center ">
@@ -34,7 +46,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="nav_right_div d-flex">
-          <span>
+          <span onClick={searchOnHandler}>
             <IoMdSearch />
           </span>
           <span className="user_icon position-relative">

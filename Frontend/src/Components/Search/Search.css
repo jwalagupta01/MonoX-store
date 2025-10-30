@@ -1,0 +1,13 @@
+
+.search_form input{
+    height: 30px;
+    width: 400px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.search_form button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
