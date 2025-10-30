@@ -3,7 +3,7 @@ import "./CollectionTitle.css";
 
 const CollectionTitle = ({ txt1, txt2, txt3 }) => {
   return (
-    <div className="collection_title d-flex text-center align-items-center flex-column mt-3">
+    <div className="collection_title d-flex text-center align-items-center flex-column">
       <div className="d-flex">
         <h1 className="text-dark">
           <span className="text-secondary">{txt1}</span> {txt2}
