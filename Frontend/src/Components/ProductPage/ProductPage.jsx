@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContextProvider";
 import ProductHero from "./ProductHero.jsx/ProductHero";
+import CollectionTitle from "../CollectionTitle/CollectionTitle";
+import { FaAngleDoubleRight } from "react-icons/fa";
+import ProductDescription from "./ProductDescription/ProductDescription";
 
 const ProductPage = () => {
   const { ProductId } = useParams();
@@ -27,6 +30,31 @@ const ProductPage = () => {
     <div className="Product_main_div">
       <div className="product_hero">
         <ProductHero productData={productData} mainImage={mainImage} />
+      </div>
+      <div className="my-5">
+        <CollectionTitle txt1={"FEATURES"} txt2={""} />
+        <div className="border rounded px-3 py-4 ">
+          <p className="fw-semibold">
+            <FaAngleDoubleRight className="me-3" />
+            Easy return and exchange policy within 7 days.
+          </p>
+          <p className="fw-semibold">
+            <FaAngleDoubleRight className="me-3" />
+            Easy return and exchange policy within 7 days.
+          </p>
+        </div>
+      </div>
+      <div className="my-5">
+        <CollectionTitle txt1={"TERMS &"} txt2={"CONDITION"} />
+        <div className="border rounded px-3 py-4 ">
+          <p className="fw-semibold">
+            <FaAngleDoubleRight className="me-3" />
+            Easy return and exchange policy within 7 days.
+          </p>
+        </div>
+      </div>
+      <div>
+        <ProductDescription />
       </div>
     </div>
   ) : (
