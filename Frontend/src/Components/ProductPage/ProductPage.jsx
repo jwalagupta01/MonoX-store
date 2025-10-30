@@ -5,6 +5,7 @@ import ProductHero from "./ProductHero.jsx/ProductHero";
 import CollectionTitle from "../CollectionTitle/CollectionTitle";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import ProductDescription from "./ProductDescription/ProductDescription";
+import RelatedProduct from "./RelatedProduct/RelatedProduct";
 
 const ProductPage = () => {
   const { ProductId } = useParams();
@@ -55,6 +56,9 @@ const ProductPage = () => {
       </div>
       <div>
         <ProductDescription />
+      </div>
+      <div>
+        <RelatedProduct productData={productData} />
       </div>
     </div>
   ) : (

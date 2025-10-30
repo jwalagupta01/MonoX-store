@@ -1,0 +1,16 @@
+.related_product{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width:765px) {
+    .related_product{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:515px) {
+    .related_product{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
