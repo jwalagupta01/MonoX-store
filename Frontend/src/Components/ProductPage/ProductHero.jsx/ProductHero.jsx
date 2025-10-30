@@ -6,9 +6,19 @@ const ProductHero = ({ productData, mainImage }) => {
   const { currency } = useContext(ShopContext);
 
   return (
-    <div className="my-4 ms-3 px-2 py-2 bg-light rounded border">
+    <div className="my-4 ms-3 px-2 py-2 bg-light rounded border-bottom">
       <div className="product_hero_div d-flex align-items-center">
-        <div className="product_img_list ps-2">
+        <div className="product_img_list d-flex ps-2">
+          {productData.image.map((item, index) => (
+            <div key={index} className="side_img_list d-flex flex-column mt-2">
+              <img src={item} alt="" className="rounded border border-secondary" />
+            </div>
+          ))}
+          {productData.image.map((item, index) => (
+            <div key={index} className="side_img_list d-flex flex-column mt-2">
+              <img src={item} alt="" className="rounded border border-secondary" />
+            </div>
+          ))}
           {productData.image.map((item, index) => (
             <div key={index} className="side_img_list d-flex flex-column mt-2">
               <img src={item} alt="" className="rounded border border-secondary" />
@@ -20,7 +30,7 @@ const ProductHero = ({ productData, mainImage }) => {
         </div>
         <div className="product_details px-4 py-2">
           <h4 className="product_name fw-semibold">{productData.name}</h4>
-          <div className="product_rateing d-flex">⭐⭐⭐⭐⭐<p>(200)</p></div>
+          <div className="product_rateing d-flex"><p>⭐⭐⭐⭐⭐(200)</p></div>
           <h3>
             {currency}
             {productData.price}
@@ -30,7 +40,7 @@ const ProductHero = ({ productData, mainImage }) => {
             <p>Select Size</p>
             <div className="d-flex">
               {productData.sizes.map((item, index) => (
-                <p className="px-3 py-2 border" key={index}>
+                <p className="px-3 fw-semibold py-2 border" key={index}>
                   {item}
                 </p>
               ))}
