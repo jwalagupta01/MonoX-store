@@ -40,7 +40,7 @@ const ProductHero = ({ productData, mainImage, setMainImage }) => {
           <p>{productData.description}</p>
           <div className="size_div">
             <p>Select Size</p>
-            <div className="d-flex">
+            <div className="product_size d-flex">
               {productData.sizes.map((item, index) => (
                 <p
                   onClick={() => setSize(item)}

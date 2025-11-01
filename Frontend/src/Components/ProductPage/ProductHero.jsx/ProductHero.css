@@ -15,6 +15,10 @@
     width: 100px;
 }
 
+.product_size{
+    cursor: pointer;
+}
+
 @media (max-width:1200px) {
     .product_img_list{
         width: 700px;
