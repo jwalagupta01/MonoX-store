@@ -4,7 +4,7 @@ import { ShopContext } from "../../Context/ShopContextProvider";
 import { MdDeleteForever } from "react-icons/md";
 
 const CartProduct = ({ cartData }) => {
-  const { products, currency } = useContext(ShopContext);
+  const { products, currency, updateQuantity } = useContext(ShopContext);
 
   return (
     <div className="">
@@ -34,12 +34,29 @@ const CartProduct = ({ cartData }) => {
               </div>
             </div>
             <div>
-            <label htmlFor="" className="fw-semibold">Quantity</label>
-            <input type="number" className="quantity" placeholder={item.quantity} />
+              <label htmlFor="" className="fw-semibold">
+                Quantity
+              </label>
+              <input
+                type="number"
+                className="quantity"
+                min={1}
+                defaultValue={item.quantity}
+                onChange={(e) =>
+                  e.target.value === "" || e.target.value === "0"
+                    ? null
+                    : updateQuantity(
+                        item._id,
+                        item.size,
+                        Number(e.target.value)
+                      )
+                }
+              />
             </div>
             <button
               className="delete_button border-0 bg-transparent fs-3"
               type="button"
+              onClick={() => updateQuantity(item._id, item.size, 0)}
             >
               <MdDeleteForever />
             </button>
