@@ -4,6 +4,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .product_img_list::-webkit-scrollbar{

@@ -13,11 +13,13 @@ import Product from "./Pages/Product";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Search from "./Components/Search/Search";
+import { ToastContainer, toast } from "react-toastify";
 
 const App = () => {
   return (
     <div className="main_div">
       <div>
+        <ToastContainer />
         <Navbar />
         <Search />
         <Routes>

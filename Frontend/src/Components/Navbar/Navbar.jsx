@@ -12,7 +12,7 @@ import { ShopContext } from "../../Context/ShopContextProvider.jsx";
 
 const Navbar = () => {
   const [navVisible, setNavVisible] = useState(false);
-  const { showSearch, SetShowSearch } = useContext(ShopContext);
+  const { showSearch, SetShowSearch, getCartCount } = useContext(ShopContext);
   const navigate = useNavigate();
   const location = useLocation();
   const searchOnHandler = () => {
@@ -63,7 +63,7 @@ const Navbar = () => {
             <Link to={"/cart"}>
               <IoBagHandleSharp />
               <p className="position-absolute top-100 start-100 translate-middle badge rounded-pill">
-                0
+                {getCartCount()}
               </p>
             </Link>
           </span>

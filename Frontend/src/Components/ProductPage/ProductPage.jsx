@@ -30,7 +30,11 @@ const ProductPage = () => {
   return productData ? (
     <div className="Product_main_div">
       <div className="product_hero">
-        <ProductHero productData={productData} mainImage={mainImage} />
+        <ProductHero
+          productData={productData}
+          mainImage={mainImage}
+          setMainImage={setMainImage}
+        />
       </div>
       <div className="my-5">
         <CollectionTitle txt1={"FEATURES"} txt2={""} />
