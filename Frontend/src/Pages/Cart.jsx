@@ -6,7 +6,7 @@ import CarTotal from "../Components/CarTotal/CarTotal";
 
 
 const Cart = () => {
-  const { products, currency, cartItems } = useContext(ShopContext);
+  const { cartItems } = useContext(ShopContext);
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {

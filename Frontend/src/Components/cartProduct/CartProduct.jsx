@@ -2,11 +2,14 @@ import React, { useContext } from "react";
 import "./CartProduct.css";
 import { ShopContext } from "../../Context/ShopContextProvider";
 import { MdDeleteForever } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const CartProduct = ({ cartData }) => {
   const { products, currency, updateQuantity } = useContext(ShopContext);
+  const navigate = useNavigate()
 
-  return (
+  return cartData.length > 0 ? (
     <div className="">
       {cartData.map((item, index) => {
         const productData = products.find(
@@ -63,6 +66,11 @@ const CartProduct = ({ cartData }) => {
           </div>
         );
       })}
+    </div>
+  ) : (
+    <div className="d-flex my-5 justify-content-center align-items-center flex-column">
+      <p className="fw-bold fs-4">Your cart Is Empty</p>
+      <button className="btn btn-outline-info px-5 py-2 fw-semibold" onClick={() => {navigate('/collection'), toast.info("Your cart Is Empty")}} type="button">Buy Now</button>
     </div>
   );
 };
