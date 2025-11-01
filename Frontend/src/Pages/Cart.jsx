@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../Context/ShopContextProvider";
 import CollectionTitle from "../Components/CollectionTitle/CollectionTitle";
 import CartProduct from "../Components/cartProduct/cartProduct";
+import CarTotal from "../Components/CarTotal/CarTotal";
 
 
 const Cart = () => {
@@ -32,6 +33,9 @@ const Cart = () => {
       </div>
       <div className="product_list_div py-2 border-top border-bottom rounded">
         <CartProduct cartData={cartData} />
+      </div>
+      <div>
+        <CarTotal />
       </div>
     </div>
   );

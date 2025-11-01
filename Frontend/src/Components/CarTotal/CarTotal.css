@@ -1,0 +1,16 @@
+.cart_total{
+    width: 50%;
+}
+
+.cart_total_details p{
+    font-size: 15px;
+}
+.cart_total_details button{
+    font-size: 13px;
+}
+
+@media (max-width:700px) {
+    .cart_total{
+        width: 100%;
+    }
+}
