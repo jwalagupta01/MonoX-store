@@ -29,7 +29,7 @@ const LoginPage = () => {
               <p className="fw-bold text-dark ps-3">Forgot Your Password..?</p>
             </Link>
             <Link to={"/register"}>
-              <p className="fw-bold text-dark pe-3">Create Account...</p>
+              <p className="fw-bold text-primary pe-3">Create Account...</p>
             </Link>
           </div>
           <div>

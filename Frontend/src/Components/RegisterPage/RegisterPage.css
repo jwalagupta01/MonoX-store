@@ -1,0 +1,16 @@
+.sign_up_div {
+  width: 100%;
+}
+.sign_up_box {
+  width: 50%;
+}
+
+.sing_up_form {
+  width: 100%;
+}
+
+.sing_up_form input {
+  height: 50px;
+  outline: none;
+  font-weight: 700;
+}
