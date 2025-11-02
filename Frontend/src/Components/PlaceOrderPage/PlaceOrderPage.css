@@ -1,0 +1,46 @@
+.get_details_div {
+  width: 50%;
+}
+
+.get_details_div input {
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  outline: none;
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+.payment_amount_details {
+  width: 50%;
+}
+
+.check_box_div{
+    cursor: pointer;
+}
+
+.check_box_div img {
+  width: 100px;
+  height: 25px;
+  margin-top: 9px;
+}
+
+.check_box_div p {
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+}
+
+.cod_div {
+  cursor: pointer;
+}
+
+.cod_text_1 {
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+}
+.cod_text_2 {
+  margin-top: 10px;
+}
