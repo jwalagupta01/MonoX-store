@@ -4,12 +4,17 @@ import { Link } from "react-router-dom";
 import CollectionTitle from "../CollectionTitle/CollectionTitle";
 
 const LoginPage = () => {
+  const onSubmitHandler = async (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="login_div">
       <div className="border rounded p-3">
         <CollectionTitle txt2={"Login"} />
         <form
           action=""
+          onSubmit={onSubmitHandler}
           className="login_form d-flex flex-column justify-content-center align-items-center"
         >
           <input
@@ -20,7 +25,7 @@ const LoginPage = () => {
           />
           <input
             type="password"
-            placeholder="Enter Your Email"
+            placeholder="Enter Password"
             required
             className="px-3 mt-3 rounded border border-dark"
           />

@@ -14,3 +14,15 @@
   outline: none;
   font-weight: 700;
 }
+
+@media (max-width:750px) {
+  .sign_up_box{
+    width: 70%;
+  }
+}
+
+@media (max-width:500px) {
+  .sign_up_box{
+    width: 100%;
+  }
+}
