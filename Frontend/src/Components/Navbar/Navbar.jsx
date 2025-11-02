@@ -50,7 +50,9 @@ const Navbar = () => {
             <IoMdSearch />
           </span>
           <span className="user_icon position-relative">
-            <FaRegUser />
+            <Link to={'/login'}>
+              <FaRegUser />
+            </Link>
             <div className="user_hover_div d-none">
               <div className="hover_box border rounded d-flex flex-column fs-5 position-absolute">
                 <div className="hovor_1">My Profile</div>
