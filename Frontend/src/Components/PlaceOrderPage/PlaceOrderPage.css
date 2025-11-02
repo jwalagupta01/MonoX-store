@@ -16,8 +16,8 @@
   width: 50%;
 }
 
-.check_box_div{
-    cursor: pointer;
+.check_box_div {
+  cursor: pointer;
 }
 
 .check_box_div img {
@@ -43,4 +43,49 @@
 }
 .cod_text_2 {
   margin-top: 10px;
+}
+
+@media (max-width: 1120px) {
+  .get_details_div {
+    width: 100%;
+  }
+  .payment_amount_details {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .place_order_main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 670px) {
+  .check_box_div p {
+    height: 12px;
+    width: 12px;
+  }
+  .check_box_div img {
+    height: 20px;
+    width: 80px;
+  }
+  .cod_text_1 {
+    height: 12px;
+    width: 12px;
+  }
+  .cod_text_2 {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .check_box_div img {
+    height: 15px;
+    width: 60px;
+  }
+  .cod_text_1 {
+    height: 12px;
+    width: 12px;
+  }
+  .cod_text_2 {
+    font-size: 8px;
+  }
 }

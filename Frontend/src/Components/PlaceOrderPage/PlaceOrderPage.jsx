@@ -24,7 +24,7 @@ const PlaceOrderPage = () => {
 
   return (
     <div className="place_order_main my-5 pb-5">
-      <div className="d-flex justify-content-between">
+      <div className="place_order_main d-flex justify-content-between">
         <div className="get_details_div border-end pe-3">
           <div>
             <CollectionTitle txt1={"DELIVERY"} txt2={"INFORMATION"} />
