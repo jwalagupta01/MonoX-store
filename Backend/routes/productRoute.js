@@ -4,7 +4,7 @@ import {
   listProduct,
   removeProduct,
   productInfo,
-} from "../Controllers/productController";
+} from "../Controllers/productController.js";
 
 const productRoute = express.Router();
 
