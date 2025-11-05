@@ -10,7 +10,7 @@ import upload from "../MiddleWare/multer.middleware.js";
 const productRoute = express.Router();
 
 productRoute.post(
-  "/addProduct",
+  "/add_Product",
   upload.fields([
     { name: "image1", maxCount: 1 },
     { name: "image2", maxCount: 1 },
