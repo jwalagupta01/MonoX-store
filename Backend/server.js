@@ -10,8 +10,8 @@ import productRoute from "./routes/productRoute.js";
 
 const app = express();
 const port = process.env.PORT || 8000;
-connectDB();
 connectCloudinary();
+connectDB();
 
 // middlewares
 app.use(express.json());
@@ -20,7 +20,7 @@ app.use(cors());
 // api endpoint
 
 app.use("/api/user", userRouter);
-app.use("/api/v2/product", productRoute);
+app.use("/api/v1/product", productRoute);
 
 app.get("/", (req, res) => {
   res.send("API WORKING");
