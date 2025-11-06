@@ -1,8 +1,9 @@
-.nav_logo{
-    width: 150px;
+.nav_logo {
+  width: 150px;
+  cursor: pointer;
 }
-@media (max-width:400px) {
-    .nav_logo{
-        width: 100px;
-    }
+@media (max-width: 400px) {
+  .nav_logo {
+    width: 100px;
+  }
 }
