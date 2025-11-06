@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
-const Navbar = () => {
+const Navbar = ({setToken}) => {
   const navigate = useNavigate();
 
   return (
@@ -17,7 +17,7 @@ const Navbar = () => {
         />
       </div>
       <div>
-        <button type="button" className="btn btn-outline-dark rounded-pill">
+        <button type="button" onClick={()=>setToken("")} className="btn btn-outline-dark rounded-pill">
           Logout
         </button>
       </div>
