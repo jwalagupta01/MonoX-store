@@ -7,7 +7,12 @@
 .list_product:hover {
   cursor: pointer;
   background-color: rgb(53, 52, 52);
-  color: white;
+  color: white !important;
+}
+
+.active {
+  background-color: rgb(238, 184, 202);
+  border: black !important;
 }
 
 @media (max-width: 1050px) {

@@ -1,42 +1,37 @@
 import React from "react";
 import "./Sidebar.css";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaClipboardList } from "react-icons/fa6";
 import { TbSquareRoundedPlusFilled } from "react-icons/tb";
 import { LuPackageCheck } from "react-icons/lu";
 
 const Sidebar = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="sidebar d-flex flex-column align-items-center border-end">
-      <div
-        onClick={() => navigate("/add-items")}
+      <NavLink
+        to={"/add-items"}
         className="add_item d-flex border w-100 mt-3 ps-3"
       >
         <p>
           <TbSquareRoundedPlusFilled />
         </p>
         <p>Add Items</p>
-      </div>
-      <div
-        onClick={() => navigate("/item-list")}
+      </NavLink>
+      <NavLink
+        to={"/item-list"}
         className="list_product d-flex border w-100 mt-3 ps-3"
       >
         <p>
           <FaClipboardList />
         </p>
         <p>List Items</p>
-      </div>
-      <div
-        onClick={() => navigate("/order")}
-        className="orders d-flex border w-100 mt-3 ps-3"
-      >
+      </NavLink>
+      <NavLink to={"/order"} className="orders d-flex border w-100 mt-3 ps-3">
         <p>
           <LuPackageCheck />
         </p>
         <p>Orders</p>
-      </div>
+      </NavLink>
     </div>
   );
 };
