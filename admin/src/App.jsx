@@ -1,17 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Login from "./page/Login";
-import Home from "./page/Home";
 import Additem from "./page/Additem";
 import ListItem from "./page/ListItem";
 import Orders from "./page/Orders";
+import Navbar from "./Components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <div>
+    <div className="px-5 py-3">
+      <div>
+        <Navbar />
+      </div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Login />} />
         <Route path="/add-items" element={<Additem />} />
         <Route path="/item-list" element={<ListItem />} />
         <Route path="/order" element={<Orders />} />
