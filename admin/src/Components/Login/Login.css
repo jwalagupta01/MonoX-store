@@ -1,0 +1,31 @@
+.login_div {
+  height: 90vh;
+  width: 100%;
+}
+
+.login_box {
+  width: 35%;
+}
+
+
+.form_box input {
+  outline: none;
+  width: 100%;
+  font-weight: 500;
+  height: 50px;
+}
+@media (max-width:900px) {
+    .login_box{
+        width: 50%;
+    }
+}
+@media (max-width:650px) {
+    .login_box{
+        width: 70%;
+    }
+}
+@media (max-width:500px) {
+    .login_box{
+        width: 100%;
+    }
+}

@@ -1,5 +1,5 @@
 .sidebar {
-  width: 200px;
+  width: 15%;
   height: 100vh;
 }
 .add_item:hover,
@@ -12,21 +12,26 @@
 
 .active {
   background-color: rgb(238, 184, 202);
-  border: black !important;
+  border: rgb(0, 0, 0) !important;
 }
 
 @media (max-width: 1050px) {
-  .sidebar {
-    width: 150px;
+  .sidebar p {
+    font-size: 13px;
   }
 }
 
 @media (max-width: 800px) {
   .sidebar {
-    width: 100px;
+    width: 13%;
   }
   .sidebar p {
-    font-size: 13px;
+    font-size: 25px;
+  }
+  .list_product p:nth-of-type(2),
+  .add_item p:nth-of-type(2),
+  .orders p:nth-of-type(2) {
+    display: none;
   }
 }
 
@@ -34,14 +39,7 @@
   .sidebar {
     width: 50px;
   }
-  .add_item p,
-  .orders p,
-  .list_product p {
+  .sidebar p {
     font-size: 25px;
-  }
-  .list_product p:nth-of-type(2),
-  .add_item p:nth-of-type(2),
-  .orders p:nth-of-type(2) {
-    display: none;
   }
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
-import { FaClipboardList } from "react-icons/fa6";
-import { TbSquareRoundedPlusFilled } from "react-icons/tb";
+import { FaClipboardList, FaPlus } from "react-icons/fa6";
 import { LuPackageCheck } from "react-icons/lu";
 
 const Sidebar = () => {
@@ -10,23 +9,26 @@ const Sidebar = () => {
     <div className="sidebar d-flex flex-column align-items-center border-end">
       <NavLink
         to={"/add-items"}
-        className="add_item d-flex border w-100 mt-3 ps-3"
+        className="add_item d-flex border w-100 mt-3 ps-3 text-dark"
       >
         <p>
-          <TbSquareRoundedPlusFilled />
+          <FaPlus />
         </p>
         <p>Add Items</p>
       </NavLink>
       <NavLink
         to={"/item-list"}
-        className="list_product d-flex border w-100 mt-3 ps-3"
+        className="list_product d-flex border w-100 mt-3 ps-3 text-dark"
       >
         <p>
           <FaClipboardList />
         </p>
         <p>List Items</p>
       </NavLink>
-      <NavLink to={"/order"} className="orders d-flex border w-100 mt-3 ps-3">
+      <NavLink
+        to={"/order"}
+        className="orders d-flex border w-100 mt-3 ps-3 text-dark"
+      >
         <p>
           <LuPackageCheck />
         </p>
