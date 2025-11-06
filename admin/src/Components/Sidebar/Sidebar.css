@@ -1,0 +1,42 @@
+.sidebar {
+  width: 200px;
+  height: 100vh;
+}
+.add_item:hover,
+.orders:hover,
+.list_product:hover {
+  cursor: pointer;
+  background-color: rgb(53, 52, 52);
+  color: white;
+}
+
+@media (max-width: 1050px) {
+  .sidebar {
+    width: 150px;
+  }
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 100px;
+  }
+  .sidebar p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 50px;
+  }
+  .add_item p,
+  .orders p,
+  .list_product p {
+    font-size: 25px;
+  }
+  .list_product p:nth-of-type(2),
+  .add_item p:nth-of-type(2),
+  .orders p:nth-of-type(2) {
+    display: none;
+  }
+}

@@ -4,12 +4,16 @@ import Additem from "./page/Additem";
 import ListItem from "./page/ListItem";
 import Orders from "./page/Orders";
 import Navbar from "./Components/Navbar/Navbar";
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 const App = () => {
   return (
     <div className="px-5 py-3">
       <div>
         <Navbar />
+      </div>
+      <div>
+        <Sidebar />
       </div>
       <Routes>
         <Route path="/add-items" element={<Additem />} />
