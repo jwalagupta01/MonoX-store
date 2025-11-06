@@ -102,6 +102,23 @@ const removeProduct = async (req, res) => {
 
 // function for single product info
 
-const productInfo = async (req, res) => {};
+const productInfo = async (req, res) => {
+  try {
+    const { productId } = req.body;
+    const product = await ProductModel.findById(productId);
+
+    res.json({
+      success: true,
+      message: "product info find successfully",
+      product,
+    });
+  } catch (error) {
+    console.log("error: ", error);
+    res.json({
+      success: true,
+      message: error.message,
+    });
+  }
+};
 
 export { addProduct, listProduct, removeProduct, productInfo };
