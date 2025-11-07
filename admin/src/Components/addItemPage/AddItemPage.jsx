@@ -203,9 +203,9 @@ const AdditemPage = ({ token }) => {
                   onChange={(e) => setCategory(e.target.value)}
                   className="rounded border px-2 py-2"
                 >
-                  <option value="Topwear">Topwear</option>
-                  <option value="Bottomwear">Bottomwear</option>
-                  <option value="Winterwear">Winterwear</option>
+                  <option value="Men">Men</option>
+                  <option value="Women">Women</option>
+                  <option value="Kids">Kids</option>
                 </select>
               </div>
               <div className="prod_sub_category d-flex flex-column">
@@ -214,9 +214,9 @@ const AdditemPage = ({ token }) => {
                   onChange={(e) => setSubCategory(e.target.value)}
                   className="rounded border px-2 py-2"
                 >
-                  <option value="Men">Men</option>
-                  <option value="Women">Women</option>
-                  <option value="Kids">Kids</option>
+                  <option value="Topwear">Topwear</option>
+                  <option value="Bottomwear">Bottomwear</option>
+                  <option value="Winterwear">Winterwear</option>
                 </select>
               </div>
               <div className="prod_Price d-flex flex-column">
