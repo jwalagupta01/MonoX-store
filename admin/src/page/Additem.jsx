@@ -1,9 +1,10 @@
 import React from "react";
+import AdditemPage from "../Components/addItemPage/AddItempage";
 
-const Additem = () => {
+const Additem = ({ token }) => {
   return (
-    <div className="px-4 py-2">
-      <div>hello</div>
+    <div>
+      <AdditemPage token={token} />
     </div>
   );
 };

@@ -1,0 +1,47 @@
+.upload_image {
+  width: 50%;
+}
+
+.upl_img {
+  gap: 10px;
+}
+
+.upl_img img {
+  width: 80px;
+  height: 90px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.sixe_box {
+  gap: 10px;
+}
+input,
+textarea,
+select {
+  outline: none;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border: 2px solid rgb(245, 142, 177) !important;
+}
+
+.sixe_box div {
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sixe_box p {
+  font-weight: 700;
+}
+
+@media (max-width: 730px) {
+  .upload_image {
+    width: 100%;
+  }
+}
