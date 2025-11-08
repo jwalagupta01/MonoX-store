@@ -20,7 +20,7 @@ const AdditemPage = ({ token }) => {
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("Men");
   const [subCategory, setSubCategory] = useState("Topwear");
-  const [bestSeller, setBestSeller] = useState();
+  const [bestSeller, setBestSeller] = useState(false);
   const [sizes, setSize] = useState([]);
 
   const addProductHandler = async (e) => {
