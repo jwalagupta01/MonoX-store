@@ -6,6 +6,7 @@ admin/node_modules/
 # Environment files
 backend/.env
 admin/.env
+Frontend/.env
 
 # Logs
 *.log

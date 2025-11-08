@@ -15,6 +15,8 @@ import Footer from "./Components/Footer/Footer";
 import Search from "./Components/Search/Search";
 import { ToastContainer, toast } from "react-toastify";
 
+export const BackendURL = import.meta.env.VITE_BACKEND_URL;
+
 const App = () => {
   return (
     <div className="main_div">
