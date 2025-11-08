@@ -29,6 +29,11 @@ a.active .nav_p {
   font-size: 10px;
   background-color: rgb(243, 5, 5);
 }
+
+.hover_box {
+  z-index: +999;
+}
+
 .user_icon:hover .user_hover_div {
   display: block !important;
 }
@@ -53,7 +58,7 @@ a.active .nav_p {
   cursor: pointer;
 }
 
-.drop_menu{
+.drop_menu {
   z-index: 1000;
 }
 
@@ -64,7 +69,7 @@ a.active .nav_p {
   .three_dot_menu {
     display: block;
   }
-  a.active{
+  a.active {
     background-color: black;
     color: white !important;
   }

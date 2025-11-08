@@ -3,6 +3,10 @@
     overflow: hidden;
 }
 
+.hero_div_img img{
+    z-index: 1;
+}
+
 .carousel-item img{
     width: 100%;
     height: auto;

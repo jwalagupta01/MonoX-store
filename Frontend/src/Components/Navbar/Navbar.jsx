@@ -9,12 +9,21 @@ import { IoIosArrowBack } from "react-icons/io";
 import { assets } from "../../assets/frontend_assets/assets.js";
 import { useContext } from "react";
 import { ShopContext } from "../../Context/ShopContextProvider.jsx";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [navVisible, setNavVisible] = useState(false);
-  const { showSearch, SetShowSearch, getCartCount } = useContext(ShopContext);
+  const {
+    showSearch,
+    SetShowSearch,
+    getCartCount,
+    token,
+    setToken,
+    setCartItems,
+  } = useContext(ShopContext);
   const navigate = useNavigate();
   const location = useLocation();
+
   const searchOnHandler = () => {
     if (location.pathname.includes("collection")) {
       SetShowSearch(!showSearch);
@@ -23,6 +32,17 @@ const Navbar = () => {
       SetShowSearch(true);
     }
   };
+  const logoutOnclickHandler = async (e) => {
+    e.preventDefault();
+
+    try {
+      localStorage.removeItem("token");
+      setToken(""), setCartItems({}), navigate("/login");
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   return (
     <nav>
       <div className="navbar d-flex justify-content-between align-items-center ">
@@ -50,16 +70,20 @@ const Navbar = () => {
             <IoMdSearch />
           </span>
           <span className="user_icon position-relative">
-            <Link to={'/login'}>
+            <span onClick={() => (token ? null : navigate("/login"))}>
               <FaRegUser />
-            </Link>
-            <div className="user_hover_div d-none">
-              <div className="hover_box border rounded d-flex flex-column fs-5 position-absolute">
-                <div className="hovor_1">My Profile</div>
-                <div className="hovor_2">My Orders</div>
-                <div className="hovor_3">Logout</div>
+            </span>
+            {token && (
+              <div className="user_hover_div d-none">
+                <div className="hover_box border rounded d-flex flex-column fs-5 position-absolute">
+                  <div className="hovor_1">My Profile</div>
+                  <div className="hovor_2">My Orders</div>
+                  <div className="hovor_3" onClick={logoutOnclickHandler}>
+                    Logout
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
           </span>
           <span className="position-relative">
             <Link to={"/cart"}>
