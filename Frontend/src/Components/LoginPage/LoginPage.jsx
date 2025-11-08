@@ -1,12 +1,46 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./LoginPage.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import CollectionTitle from "../CollectionTitle/CollectionTitle";
+import { ShopContext } from "../../Context/ShopContextProvider";
+import axios from "axios";
 
 const LoginPage = () => {
+  const { BackendURL, token, setToken } = useContext(ShopContext);
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const onSubmitHandler = async (e) => {
     e.preventDefault();
+
+    try {
+      const response = await axios.post(BackendURL + "/user/login", {
+        email,
+        password,
+      });
+
+      if (response.data.success) {
+        localStorage.setItem("token", response.data.token);
+        setToken(response.data.token);
+        toast.success("Login Successfully");
+        navigate("/");
+      } else {
+        toast.error(response.data.message);
+        setEmail("");
+        setPassword("");
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
+
+  useEffect(() => {
+    if (token) {
+      navigate("/");
+    }
+  }, [token]);
 
   return (
     <div className="login_div">
@@ -21,11 +55,15 @@ const LoginPage = () => {
             type="email"
             placeholder="Enter Your Email"
             required
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
             className="px-3 rounded border border-dark"
           />
           <input
             type="password"
             placeholder="Enter Password"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
             required
             className="px-3 mt-3 rounded border border-dark"
           />
