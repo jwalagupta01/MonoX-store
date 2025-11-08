@@ -77,7 +77,9 @@ const Navbar = () => {
               <div className="user_hover_div d-none">
                 <div className="hover_box border rounded d-flex flex-column fs-5 position-absolute">
                   <div className="hovor_1">My Profile</div>
-                  <div className="hovor_2">My Orders</div>
+                  <div className="hovor_2" onClick={() => navigate("/order")}>
+                    My Orders
+                  </div>
                   <div className="hovor_3" onClick={logoutOnclickHandler}>
                     Logout
                   </div>
