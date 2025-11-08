@@ -10,7 +10,7 @@ const LatestCollection = () => {
 
   useEffect(() => {
     setLatestProduct(products.sort(() => Math.random() - 0.5).slice(0, 10));
-  }, []);
+  }, [products]);
 
   return (
     <div className="latest_product_div d-flex flex-column align-items-center mt-5">

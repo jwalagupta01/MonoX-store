@@ -3,37 +3,13 @@ import "./CollectionPage.css";
 import CollectionTitle from "../CollectionTitle/CollectionTitle";
 import { ShopContext } from "../../Context/ShopContextProvider";
 import ProductItems from "../Product/ProductItems";
-import { BackendURL } from "../../App";
-import axios from "axios";
-import { toast } from "react-toastify";
 
 const CollectionPage = () => {
-  const [productList, setProductList] = useState([]);
-  const { showSearch, search } = useContext(ShopContext);
+  const { products, showSearch, search } = useContext(ShopContext);
   const [filterProduct, setFilterProduct] = useState([]);
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [sortType, setSortType] = useState("relavent");
-
-  const fetchProductdata = async () => {
-    try {
-      const response = await axios.get(
-        BackendURL + "/api/v1/product/product_list"
-      );
-      if (response.data.success) {
-        setProductList(response.data.products);
-      } else {
-        toast.error("Data Not Fetched");
-      }
-    } catch (error) {
-      toast.error(error.message);
-    }
-    console.log(productList);
-  };
-
-  useEffect(() => {
-    fetchProductdata();
-  }, []);
 
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
@@ -51,7 +27,7 @@ const CollectionPage = () => {
   };
 
   const applyFilter = () => {
-    let productCopy = productList.slice();
+    let productCopy = products.slice();
 
     if (showSearch && search) {
       productCopy = productCopy.filter((item) =>
@@ -90,7 +66,7 @@ const CollectionPage = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory, search, showSearch]);
+  }, [category, subCategory, search, showSearch,products]);
 
   useEffect(() => {
     sortProduct();

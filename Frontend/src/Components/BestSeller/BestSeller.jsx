@@ -13,7 +13,7 @@ const BestSeller = () => {
     setBestSellerProduct(
       bestProduct.sort(() => Math.random() - 0.5).slice(0, 5)
     );
-  }, []);
+  }, [products]);
 
   return (
     <div className="best_seller d-flex flex-column align-items-center mt-5">
