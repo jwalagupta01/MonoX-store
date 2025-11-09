@@ -11,6 +11,8 @@ const PlaceOrderPage = () => {
   const { getCartAmount } = useContext(ShopContext);
   const navigate = useNavigate();
   const [method, setMethod] = useState("cod");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   // if cart is empty
   const cartEmpty = () => {
