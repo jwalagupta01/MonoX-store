@@ -2,12 +2,14 @@ import React from "react";
 import { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
   let currency = "₹";
   let deliveryfee = 20;
+  const navigate = useNavigate();
   const BackendURL = import.meta.env.VITE_BACKEND_URL;
   const [search, setSearch] = useState("");
   const [showSearch, SetShowSearch] = useState(false);
@@ -37,6 +39,21 @@ const ShopContextProvider = (props) => {
       cartData[itemId][size] = 1;
     }
     setCartItems(cartData);
+
+    if (token) {
+      try {
+        await axios.post(
+          BackendURL + "/user/cart/addcart",
+          { itemId, size },
+          { headers: { token } }
+        );
+      } catch (error) {
+        toast.error(error.message);
+      }
+    } else {
+      navigate("/login");
+      toast.error("Please Login");
+    }
   };
 
   // get cart count for navbar cart count
@@ -65,6 +82,21 @@ const ShopContextProvider = (props) => {
     cartData[itemId][size] = quantity;
 
     setCartItems(cartData);
+
+    if (token) {
+      try {
+        await axios.post(
+          BackendURL + "/user/cart/updatecart",
+          { itemId, size, quantity },
+          { headers: { token } }
+        );
+      } catch (error) {
+        console.log("error: ", error);
+        toast.error(error.message);
+      }
+    } else {
+      toast.error("Login again");
+    }
   };
 
   // total amout count
@@ -102,6 +134,25 @@ const ShopContextProvider = (props) => {
     }
   };
 
+  // get user cart count
+  const getUserCount = async (token) => {
+    try {
+      const response = await axios.post(
+        BackendURL + "/user/cart/getcart",
+        {},
+        { headers: { token } }
+      );
+      if (response.data.success) {
+        setCartItems(response.data.cartData);
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      console.log("error: ", error);
+      toast.error(error.message);
+    }
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -109,6 +160,7 @@ const ShopContextProvider = (props) => {
   useEffect(() => {
     if (!token && localStorage.getItem("token")) {
       setToken(localStorage.getItem("token"));
+      getUserCount(localStorage.getItem("token"));
     }
   }, []);
 
