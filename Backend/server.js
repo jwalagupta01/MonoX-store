@@ -24,7 +24,7 @@ app.use(cors());
 app.use("/api/user", userRouter);
 app.use("/api/v1/product", productRoute);
 app.use("/api/user/cart", cartRouter);
-app.use("/api/placeOrder", placeOrderRouter);
+app.use("/api/Order", placeOrderRouter);
 
 app.get("/", (req, res) => {
   res.send("API WORKING");
