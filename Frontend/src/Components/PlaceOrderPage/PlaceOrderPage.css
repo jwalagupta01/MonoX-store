@@ -1,5 +1,5 @@
 .get_details_div {
-  width: 50%;
+  width: 100%;
 }
 
 .get_details_div input {
@@ -13,7 +13,7 @@
 }
 
 .payment_amount_details {
-  width: 50%;
+  width: 100%;
 }
 
 .check_box_div {

@@ -13,7 +13,7 @@ const Cart = () => {
   // if total cart value is 0 so
 
   const cartValue = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (getCartAmount() === 0) {
       navigate("/collection");
       toast.error("Your Cart Is Empty");
