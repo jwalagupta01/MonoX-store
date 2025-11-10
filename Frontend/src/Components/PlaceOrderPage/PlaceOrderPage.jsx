@@ -49,8 +49,6 @@ const PlaceOrderPage = () => {
     if (getCartAmount() === 0) {
       navigate("/collection");
       toast.info("your Cart is empty");
-    } else {
-      navigate("/order");
     }
 
     try {
