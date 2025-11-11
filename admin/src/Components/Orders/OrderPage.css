@@ -1,0 +1,59 @@
+.order_div p {
+  font-size: 12px;
+}
+
+.img_div {
+  width: 15%;
+}
+
+.img_div img {
+  width: 100%;
+}
+
+.user_details {
+  width: 50%;
+}
+
+.user_name {
+  margin-top: -8px;
+}
+
+.adr_street {
+  margin-top: -10px;
+}
+
+.adr_city {
+  margin-top: -20px;
+}
+
+.adr_coun {
+  margin-top: -20px;
+}
+
+.adr_phno {
+  margin-top: -20px;
+}
+
+.items_details {
+  width: 35%;
+}
+
+.item_quant {
+  margin-top: -15px;
+}
+
+.item_method {
+  margin-top: -15px;
+}
+
+.item_paym {
+  margin-top: -15px;
+}
+
+.item_date {
+  margin-top: -15px;
+}
+
+.order_details {
+  width: 15%;
+}

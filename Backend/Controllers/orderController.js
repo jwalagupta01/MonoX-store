@@ -1,5 +1,6 @@
 // place Order using COD method
 
+import mongoose from "mongoose";
 import { OrderModel } from "../Model/OrderModel.js";
 import { UserModel } from "../Model/userModel.js";
 
@@ -45,7 +46,23 @@ const placeOrderStripe = async (req, res) => {};
 
 // all orders data for admin panal
 
-const allOrder = async (req, res) => {};
+const allOrder = async (req, res) => {
+  try {
+    const orderList = await OrderModel.find({});
+
+    res.json({
+      success: true,
+      message: "all order fetched successfully",
+      orderList,
+    });
+  } catch (error) {
+    console.log("error: ", error);
+    res.json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
 
 // all order data for user in frontend
 
@@ -67,7 +84,43 @@ const userOrder = async (req, res) => {
 
 // update order Status from admin Panel
 
-const updateStatus = async (req, res) => {};
+const updateStatus = async (req, res) => {
+  try {
+    const { orderId, status } = req.body;
+
+    if (!orderId || !status) {
+      return res.json({
+        success: true,
+        message: "Order ID and status are required",
+      });
+    }
+
+    const updateOrder = await OrderModel.findByIdAndUpdate(
+      orderId,
+      { status },
+      { new: true }
+    );
+
+    if (!updateOrder) {
+      return res.json({
+        success: false,
+        message: "Order Not Found",
+      });
+    }
+
+    res.json({
+      success: true,
+      message: "status Update",
+      order: updateOrder,
+    });
+  } catch (error) {
+    console.log("error: ", error);
+    res.json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
 
 export {
   placeOrder,

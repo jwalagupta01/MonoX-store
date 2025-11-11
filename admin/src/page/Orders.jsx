@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Orderspage from "../Components/Orders/Orderspage";
 
-const Orders = () => {
+const Orders = ({token}) => {
   return (
-    <div>Orders</div>
-  )
-}
+    <div>
+      <div>
+        <Orderspage token={token} />
+      </div>
+    </div>
+  );
+};
 
-export default Orders
+export default Orders;
