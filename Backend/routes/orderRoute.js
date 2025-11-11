@@ -1,12 +1,4 @@
 import exprees from "express";
-// import {
-//   placeOrder,
-//   placeOrderRazorPay,
-//   placeOrderStripe,
-//   allOrder,
-//   userOrder,
-//   updateStatus,
-// } from "../Controllers/orderController";
 import {
   placeOrder,
   placeOrderRazorPay,
