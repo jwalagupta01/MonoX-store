@@ -103,6 +103,18 @@ const PlaceOrderPage = () => {
     }
   };
 
+  // stripe pay
+
+  const stripePay = async () => {
+    setMethod("cod");
+    toast.info("StripePay is Disbled");
+  };
+  // razor Pay
+  const razorPay = async () => {
+    setMethod("cod");
+    toast.info("Razor Pay is Disbled");
+  };
+
   return (
     <div className="place_order_main my-5 pb-5">
       <div className="place_order_main d-flex justify-content-between">
@@ -199,7 +211,8 @@ const PlaceOrderPage = () => {
                 style={{ gap: "15px" }}
               >
                 <div
-                  onClick={() => setMethod("strip")}
+                  // onClick={() => setMethod("strip")}
+                  onClick={stripePay}
                   className="check_box_div border rounded d-flex px-3"
                 >
                   <p
@@ -210,7 +223,8 @@ const PlaceOrderPage = () => {
                   <img src={assets.stripe_logo} className="ms-3" alt="" />
                 </div>
                 <div
-                  onClick={() => setMethod("razor")}
+                  // onClick={() => setMethod("razor")}
+                  onClick={razorPay}
                   className="check_box_div border rounded d-flex px-3"
                 >
                   <p
@@ -235,11 +249,7 @@ const PlaceOrderPage = () => {
                 </div>
               </div>
               <div className="d-flex justify-content-center mt-5">
-                <button
-                  type="submit"
-                  // onClick={() => cartEmpty()}
-                  className="btn btn-outline-dark fw-bold"
-                >
+                <button type="submit" className="btn btn-outline-dark fw-bold">
                   {getCartAmount() === 0 ? "BUY SOMETHINGS" : "PLACE ORDER"}
                 </button>
               </div>
